@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+}
+
+.header {
+  grid-area: header;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.sidebar {
+  grid-area: sidebar;
+  border-right: 2px solid rgb(236, 233, 233);
+}
+.content {
+  grid-area: content;
+  background-color: rgb(236, 233, 233);
+}
+
+.search-AccInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 20px;
+}
+.search-section {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex: 1;
+}
+.acc-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+img {
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  max-width: 600px;
+  height: 40px;
+
+  border-radius: 6px;
+  padding: 5px 10px 5px 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.user-greeting-user-options {
+  display: flex;
+  padding: 0 30px 20px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.user-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+.user-logo > img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.user-operations {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.user-operations > button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fecd7e;
+}
+.user-operations > button:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.sidebar {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.dashboard-menu ul,
+.dashboard-options ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.dashboard-menu {
+  margin-bottom: 100px;
+}
+.dashboard-menu ul > li,
+.dashboard-options ul > li {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  width: auto;
+  height: 40px;
+  /* border: 1px solid black; */
+}
+
+.dashboard-menu ul > li:hover {
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+.project-text,
+.announcement-text,
+.Trending-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  height: 200px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 10px solid #fecd7e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-options {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.project-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  scale: 102%;
+  transition: 100ms ease-in;
+}
+
+.announcements-trend {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announcement-card,
+.trend-container {
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.announcement-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.users-trending {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+.trend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
